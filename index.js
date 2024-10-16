@@ -2,40 +2,45 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
-const { type } = require('os');
+const path = require('path');
 
 
 // TODO: Create an array of questions for user input
 const questions = [
     {
       type: "input",
-      message: "What is your name?",
       name: "githubName",
+      message: "What is your name?",
+      
     },
     {
       type: "input",
-      message: "What is your email?",
       name: "email",
+      message: "What is your email?",
+      
     },
     {
       type: "input",
+      name: 'title',
       message: "What is the title of your project?",
-      name: "title"
+      
     },
     {
       type: "input",
+      name: 'description',
       message: "Tell me about your project?",
-      name: 'description'
+      
     },
     {
       type: "list",
+        name: "license",
       message: "Which type of licesnse does the project have?",
       choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'None'],
     },
     {
       type: "input",
-      message: "What command should be run to ?",
       name: "installation",
+      message: "What command should be run to ?",
       default: "npm i",
     },
     {
@@ -46,8 +51,9 @@ const questions = [
     },
     {
         type: "input",
-        message: "What does the user need to know about using the repo?",
         name: "usage",
+        message: "What does the user need to know about using the repo?",
+        
     },
     {
         type: "input",
@@ -56,9 +62,6 @@ const questions = [
     },
   ];
   
-    const html = htmlGenerator(response);
-  
-    fs.writeFile(`${response.name}.html`, html, err => err ? console.error(err) : console.log('Success!'));
 
 
 
