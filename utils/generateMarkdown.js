@@ -1,6 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
+function renderLicenseBadg(license) {
   if (license !== 'None'){
     return `![GitHub license](https://img.shieldio/badge/license-${license.replace(' ', ' ')}-blue.svg)`;
 
@@ -20,7 +20,7 @@ function renderLicenseLink(license) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
+function renderLicenseSec(license) {
   if(license !== 'None'){
   return `## License 
   This project is licensed under the ${license} license.`;
@@ -32,7 +32,7 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  ${renderLicenseBadge(data.license)}
+  ${renderLicenseBadg(data.license)}
 ## Description
 ${data.description}
 
@@ -58,7 +58,7 @@ ${data.installation}
 ## Usage
 ${data.usage}
 
-${renderLicenseSection(data.license)}
+${renderLicenseSec(data.license)}
 
 ## Contributing
 

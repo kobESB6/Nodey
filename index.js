@@ -72,7 +72,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquiere.propmt (questions).then((inquierResponses) => {
+    inquirer.propmt (questions).then((inquierResponses) => {
         console.log('Generating README...');
         writeToFile('README.md', generateMarkdown({...inquierResponses}));
     });
