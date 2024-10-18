@@ -10,13 +10,13 @@ const questions = [
     {
       type: "input",
       name: "githubName",
-      message: "What is your name?",
+      message: "What is your GitHub username?",
       
     },
     {
       type: "input",
       name: "email",
-      message: "What is your email?",
+      message: "What is your email address?",
       
     },
     {
@@ -40,7 +40,7 @@ const questions = [
     {
       type: "input",
       name: "installation",
-      message: "What command should be run to ?",
+      message: "What command should be run to install dependencies?",
       default: "npm i",
     },
     {
@@ -66,13 +66,25 @@ const questions = [
 
 
 // TODO: Create a function to write README file
+// function writeToFile(fileName, data) {
+//     return fs.writeToFile(path.join(process.cwd(), fileName), data);   
+// }
+
 function writeToFile(fileName, data) {
-    return fs.writeToFile(path.join(process.cwd(), fileName), data);   
+  // Corrected from writeToFile to writeFile
+  fs.writeFile(path.join(process.cwd(), fileName), data, (err) => {
+    if (err) {
+      console.log('Error writing file:', err);
+    } else {
+      console.log('README.md has been generated!');
+    }
+  });
 }
+
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.propmt (questions).then((inquierResponses) => {
+    inquirer.prompt (questions).then((inquierResponses) => {
         console.log('Generating README...');
         writeToFile('README.md', generateMarkdown({...inquierResponses}));
     });
