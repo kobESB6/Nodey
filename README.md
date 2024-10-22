@@ -1,7 +1,7 @@
-# README Love
+# NodeyThe README Creator
   ![GitHub license](https://img.shieldio/badge/license-MIT-blue.svg)
 ## Description
-My Project creates Professional README files
+This Project is a Professional README Generator, a commond line application that automates the process of creating high-quality professional README.md file for GitHub Repo
 
 ## Table of Contents
 
@@ -9,7 +9,7 @@ My Project creates Professional README files
 
 * [Usage](#usage)
 
-* [License (#license)]n
+* [License](#license)
 
 * [Contributing](#contribution)
 
@@ -20,11 +20,11 @@ My Project creates Professional README files
 ## Installation
 To install necessary dependencies, run the following command:
 ```
-npm init
+npm i
 ```
 
 ## Usage
-Be creative and make amazing repos
+The user will need to have node.js installed, clone the repo install inquirer, and used terminal to make README file
 
 ## License 
   This project is licensed under the MIT license.
@@ -40,6 +40,10 @@ To run tests, run the following command:
 ```
 npm test
 ```
+
+## Link
+Video Link:
+<https://app.screencastify.com/v3/watch/FxC3yKBtauwwb2LCcB2e>
 
 ## Questions
 
